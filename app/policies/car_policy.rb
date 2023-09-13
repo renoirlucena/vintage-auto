@@ -1,9 +1,13 @@
 class CarPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      return scope.all if user.admin?
-
-      Car.includes(:sales).where(sales: { id: nil })
+      if user.present? && user.admin?
+        scope.all
+      else
+        # Additional authorization logic for non-admin users
+        # For example, return only cars that belong to the current user:
+        scope.where(user: user)
+      end
     end
   end
 

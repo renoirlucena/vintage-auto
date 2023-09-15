@@ -1,5 +1,3 @@
-# app/controllers/registrations_controller.rb
-
 class RegistrationsController < Devise::RegistrationsController
   skip_before_action :authenticate_user!
 

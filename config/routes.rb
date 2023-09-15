@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :sales, only: :create
   end
   resources :sales, only: [:show, :index]
-  
+  resources :registrations
   devise_for :users
   root to: "pages#home"
 

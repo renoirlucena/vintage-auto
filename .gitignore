@@ -45,3 +45,5 @@
 # Ignore database credentials
 database.yml
 /config/database.yml
+cloudinary.yml
+/config/cloudinary.yml

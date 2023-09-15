@@ -74,13 +74,14 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
+#      url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  database: rbnb_production
-  username: rbnb
-  password: <%= ENV["RBNB_DATABASE_PASSWORD"] %>
+  url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  database: d25ckfirqabtrj
+  username: ffoxvcslrsuwnv
+  password: a4213786d079967d5ccb3316a2e1b45d2d2ddf69876d617c685075c3e35fd896

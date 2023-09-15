@@ -41,3 +41,7 @@
 *.swp
 .DS_Store
 .env*
+
+# Ignore database credentials
+database.yml
+/config/database.yml

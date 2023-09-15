@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < Devise::RegistrationsController
   before_action :authenticate_user!
   include Pundit::Authorization
 

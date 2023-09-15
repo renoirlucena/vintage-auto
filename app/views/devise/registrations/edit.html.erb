@@ -2,7 +2,7 @@
   <div class="row align-items-center">
     <div class="col-md-6 mx-auto">
       <h2 class="text-center mb-4 h1-mycars">Update <%= resource_name.to_s.humanize %></h2>
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
         <%= f.error_notification %>
 
         <!-- Avatar Upload Field -->

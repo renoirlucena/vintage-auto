@@ -19,7 +19,7 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5 # <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
@@ -74,14 +74,18 @@ test:
 # URL environment variable explicitly:
 #
 #   production:
-#      url: <%= ENV["MY_APP_DATABASE_URL"] %>
+#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 #
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
 production:
   <<: *default
-  url: <%= ENV["MY_APP_DATABASE_URL"] %>
+  adapter: postgresql
+  encoding: unicode
   database: d25ckfirqabtrj
+  pool: 5
   username: ffoxvcslrsuwnv
   password: a4213786d079967d5ccb3316a2e1b45d2d2ddf69876d617c685075c3e35fd896
+  host: ec2-52-45-200-167.compute-1.amazonaws.com
+  port: 5432

@@ -2,7 +2,6 @@ development:
   cloud_name: "dvhbdqwsv"
   api_key: "683945892518373"
   api_secret: "LmLFQ3VKoCvggR4ntqfAV3SHfSI"
-  secure: true
 
 production:
   cloud_name: "dvhbdqwsv"
